@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 03</title>
+</head>
+<body>
+    <script>
+        var numero ;
+        numero = parseInt(prompt("Dime un numero: "));
+        if(numero == 100){
+            var numero2;
+            numero2 = numero + 200;
+            document.write(numero + " " +  numero2 );
+        } else if (numero > 100 && numero < 200) {
+            var numero2 ;
+            numero2 = numero * 2;
+            document.write(numero +" "+ numero2);
+        } else if (numero < 0){
+            var multi = numero * 3;
+            document.write(multi + " ,ES NEGATIVA")
+        }else {
+            document.write(numero);
+        }
+    </script>
+</body>
+</html>
