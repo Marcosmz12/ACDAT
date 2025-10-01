@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+</head>
+
+<body>
+    <script>
+        var letra;
+        letra = prompt("introduce una letra: ");
+
+        function esVocal(letra) {
+            if (letra == "A" || letra == "E" || letra == "I" || letra == "O" || letra == "U") {
+                return "Es vocal";
+            } else {
+                return "No es vocal"
+            }
+
+            if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u") {
+                return "Es vocal"
+            } else {
+                return "No es vocal";
+            }
+        }
+        
+        document.write(esVocal(letra));
+    </script>
+</body>
+
+</html>

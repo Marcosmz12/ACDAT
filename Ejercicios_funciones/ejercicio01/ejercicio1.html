@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1</title>
+</head>
+<body>
+    <script>
+        var numero1;
+        var numero2;
+        var numero3;
+
+        numero1 = parseInt(prompt("Introduce un numero: "));
+        numero2 = parseInt(prompt("Introduce un numero: "));
+        numero3 = parseInt(prompt("Introduce un numero: "));
+
+        function numeroMayor(numero1 , numero2 , numero3) {
+            if (numero1 === numero2 && numero2 === numero3) {
+                return "Son iguales";
+            } else {
+                return Math.max(numero1 , numero2, numero3)
+            }
+        }
+
+        document.write(numeroMayor(numero1, numero2, numero3));
+        </script>
+</body>
+</html>
