@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ejercicio05</title>
 </head>
+
 <body>
     <script>
-        
+        const array = [4, 12, 9];
+        function sumaArreglo(array) {
+            let suma = 0;
+            for (let index = 0; index < array.length; index++) {
+                suma += array[index];
+
+            }
+            return array.length + suma;
+        }
+
+        document.write("La suma del array es = " + sumaArreglo(array));
+
     </script>
 </body>
+
 </html>
