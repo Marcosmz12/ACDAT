@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura</title>
+    <script>
+        var opcion;
+        opcion = parseInt(prompt("Elige una opcion: 1.Conversion Celsius a Fahrenheit , 2. Conversion Fahrenheit a Celsius "));
+        var grados = parseInt(prompt("Introduzca la temperatura: "));
+
+        switch (opcion) {
+            case 1:
+                function conversionCelsius(grados) {
+                    grados = (grados * 9 / 5) + 32;
+                    return grados;
+                }
+                document.write(grados + " Celsius equivalen a " + conversionCelsius(grados) + " Fahrenheit");
+                break;
+            case 2:
+                function conversionFahrenheit(grados) {
+                    grados = (grados - 32) * 5/9;
+                    return grados;
+                }
+                document.write(grados + " Fahrenheit equivalen a " + conversionFahrenheit(grados) + " Celsius");
+                break;
+
+            default:
+                alert("no existe esa opcion")
+                break;
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

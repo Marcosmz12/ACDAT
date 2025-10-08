@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio06</title>
+</head>
+<body>
+    <script>
+        const array = [2,8];
+        function multiplicarArray(array) {
+            let multi = 0;
+            for (let index = 0; index < array.length; index++) {
+                multi *= array[index];
+                
+            }
+            return array.length * multi;
+        }
+
+        document.write("La multiplicacion del array es = " + multiplicarArray(array));
+    </script>
+</body>
+</html>

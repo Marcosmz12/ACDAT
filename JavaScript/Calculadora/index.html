@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+
+<body>
+    <script>
+        var number = parseInt(prompt("Introduzca un numero: "));
+        if (number < 0) {
+            document.write("El numero introducido es negativo" + number);
+        } else {
+            function calculeFactorial(number) {
+                let result = 1;
+                for (let index = 1; index <= number; index++) {
+                    result *= index;
+
+                }
+                return result;
+            }
+            console.log(calculeFactorial(number));
+            document.write("El factorial de " +number+ " es: "+calculeFactorial(number));
+        }
+    </script>
+</body>
+
+</html>
