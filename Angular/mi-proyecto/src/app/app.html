@@ -1,4 +1,22 @@
-<h1>Hola, {{userName}}</h1>
+<h1>Hola, {{ userName }}</h1>
+<h1>Username: {{ userName }}</h1>
+
 <app-header></app-header>
-<input type="text" [value] = "userName"/>
-<h1 (click)="addOne()">Number: {{number}}</h1>
+
+<input type="text" [value]="userName" /><br />
+<!--<input type="text" [(ngModel)]="userName" /> -->
+<input type="text" [(ngModel)]="userName" (input)="addOne()">
+<h2>Number: {{number}}</h2>
+
+<h1 (click)="addOne()">Number: {{ number }}</h1>
+
+
+<h1>Bloque &#64; if Renderizado dinámico</h1>
+
+@if (condicion) {
+    <h1>La condicion se cumple</h1>
+}
+
+@if (condicion2) {
+    <h1>Holaaa puta</h1>
+}
