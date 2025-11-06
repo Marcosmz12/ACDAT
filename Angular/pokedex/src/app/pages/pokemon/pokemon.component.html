@@ -1,5 +1,9 @@
 @if (pokemon) {
-<h1>#{{ pokemon.id | digitNumber : 3 }} {{ pokemon.name | titlecase }}</h1>
+  <h1>
+  <button (click)="goPrevious()">Anterior</button>
+  #{{pokemon.id | digitNumber: 3}} {{pokemon.name | titlecase}}
+  <button (click)="goNext()">Siguiente</button>
+  </h1>
 <section>
   <img [src]="pokemon.imageUrl" />
   <div class="info">
