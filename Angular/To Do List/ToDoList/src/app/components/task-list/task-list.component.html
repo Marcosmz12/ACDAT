@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>📝 ToDo List</h2>
+
+  <input type="text" placeholder="Nueva tarea..." [(ngModel)]="newTaskTitle" />
+  <button (click)="addTask()">➕</button>
+
+  <input type="text" placeholder="Filtrar tareas..." [(ngModel)]="filterText" class="filter-input" />
+
+  <ul>
+    <li *ngFor="let task of filteredTasks">
+
+      <input type="checkbox" [checked]="task.completed" (change)="toggleTask(task)" />
+
+      <span *ngIf="editingTaskId !== task.id" [class.completed]="task.completed">{{ task.title }}</span>
+      <input *ngIf="editingTaskId === task.id" [(ngModel)]="editingTaskTitle" />
+
+      <button *ngIf="editingTaskId !== task.id" (click)="startEditing(task)">Editar</button>
+      <button *ngIf="editingTaskId === task.id" (click)="saveEdit(task)">Guardar</button>
+      <button *ngIf="editingTaskId === task.id" (click)="cancelEdit()">Cancelar</button>
+
+      <button class="delete" (click)="deleteTask(task.id)">X</button>
+    </li>
+  </ul>
+
+  <p>Tareas completadas: {{ completedCount }} / {{ tasks.length }}</p>
+</div>
