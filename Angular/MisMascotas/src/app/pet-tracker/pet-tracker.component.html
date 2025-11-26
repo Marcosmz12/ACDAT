@@ -1,1 +1,62 @@
-<p>pet-tracker works!</p>
+<div class="tracker-container">
+  <h1>Pet Tracker 🐾</h1>
+
+  <!-- SECCIÓN AÑADIR -->
+  <div class="add-section">
+    <!-- Input Nombre -->
+    <input 
+      type="text" 
+      [(ngModel)]="newPet" 
+      placeholder="Nombre (mín. 3 letras)"
+      (keyup.enter)="addPet()"
+    >
+
+    <!-- Select Categoría (NUEVO) -->
+    <select [(ngModel)]="newPetType">
+      <option value="Perro">Perro</option>
+      <option value="Gato">Gato</option>
+      <option value="Otro">Otro</option>
+    </select>
+
+    <!-- Botón con validación visual (disabled) -->
+    <button 
+      class="btn-add" 
+      (click)="addPet()"
+      [disabled]="newPet.trim().length < 3"
+    >
+      Añadir
+    </button>
+  </div>
+
+  <!-- FILTROS -->
+  <div class="filters">
+    <button [class.active]="filter === 'all'" (click)="filter = 'all'">Todos</button>
+    <button [class.active]="filter === 'hungry'" (click)="filter = 'hungry'">Hambrientos</button>
+    <button [class.active]="filter === 'fed'" (click)="filter = 'fed'">Comidos ({{fedCount}})</button>
+  </div>
+
+  <!-- LISTA -->
+  <ul>
+    <li *ngFor="let pet of filteredPets" [class.fed-bg]="pet.fed">
+      
+      <div class="pet-info">
+        <!-- Checkbox directo al modelo -->
+        <input type="checkbox" [(ngModel)]="pet.fed">
+        
+        <span [class.strikethrough]="pet.fed">
+          <!-- Icono + Nombre + Tipo -->
+          <span class="pet-icon">{{ getIcon(pet.type) }}</span>
+          {{ pet.name }} 
+          <small class="pet-type-text">({{ pet.type }})</small>
+        </span>
+      </div>
+
+      <button class="btn-delete" (click)="deletePet(pet)">✕</button>
+    </li>
+  </ul>
+
+  <!-- Mensaje vacío -->
+  <p *ngIf="pets.length === 0" class="empty-msg">
+    No tienes mascotas registradas.
+  </p>
+</div>
