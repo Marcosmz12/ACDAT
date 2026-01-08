@@ -1,0 +1,36 @@
+{
+  "usuarios": [
+    {
+      "id": "1",
+      "nombre": "Ana",
+      "edad": 25
+    },
+    {
+      "id": "2",
+      "nombre": "Luis",
+      "edad": 30
+    },
+    {
+      "id": "3",
+      "nombre": "Marcos",
+      "edad": 22
+    },
+    {
+      "id": "fa8d",
+      "nombre": "Antonio ",
+      "edad": 20
+    }
+  ],
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Camiseta",
+      "precio": 20
+    },
+    {
+      "id": "2",
+      "nombre": "Pantalón",
+      "precio": 35
+    }
+  ]
+}
